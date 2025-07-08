@@ -1,6 +1,6 @@
 body {
   font-family: 'comic Sans MS', sans-serif;
-  background: linear-gradient(to bottom, #1dd3eb, #6f00ff);
+  background-image: url(098.jpg);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,12 +11,14 @@ body {
 }
 
 body.dark-mode {
-  background: linear-gradient(to bottom, #19154d, #3225e7); /* تدرج لوني للوضع الداكن */
+  background-image: url(098.jpg);
 }
 
 .container {
   text-align: center;
-  background: rgba(255, 255, 255, 0.24);
+  background: rgba(255, 255, 255, 0.13); /* لون شفاف */
+  backdrop-filter: blur(8px);           /* ضبابية الخلفية */
+  border: 1px solid rgba(255, 255, 255, 0.212); 
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
@@ -54,15 +56,20 @@ body.dark-mode {
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  background-color: rgba(255, 255, 255, 0.452);
+  background: rgba(255, 255, 255, 0.171); /* لون شفاف */
+  backdrop-filter: blur(8px);           /* ضبابية الخلفية */
+  border: 1px solid rgba(255, 255, 255, 0.212); 
   color: black;
   transition: transform 0.3s, background-color 0.3s, color 0.3s;
 }
 
 #options-container button:hover {
-  background-color: #0099ff;
-  color: white;
+    background: rgba(0, 132, 255, 0.589); /* لون شفاف */
+    backdrop-filter: blur(8px);           /* ضبابية الخلفية */
+    border: 1px solid rgba(255, 255, 255, 0.212);  
+    color: white;
   transform: scale(1.05);
+   box-shadow: 5 5 5 rgb(255, 255, 255);
 }
 
 .correct {
@@ -118,8 +125,8 @@ body.dark-mode {
 }
 
 body.dark-mode .container {
-  background: rgba(30, 30, 30, 0.479);
-  color: white;
+  background: rgba(0, 0, 0, 0.479);
+  color: rgb(255, 255, 255);
 }
 
 body.dark-mode .title {
@@ -127,11 +134,12 @@ body.dark-mode .title {
 }
 
 body.dark-mode #options-container button {
-  background-color: #ffffff83;
-  color: black;
+  background: rgba(134, 134, 134, 0.171); /* لون شفاف */
+  backdrop-filter: blur(8px);           /* ضبابية الخلفية */
+  color: white;
 }
 
 body.dark-mode #options-container button:hover {
-  background-color: #0c2bb8;
+  background-color: #161616;
   color: white;
 }
