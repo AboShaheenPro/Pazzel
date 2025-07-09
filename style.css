@@ -1,3 +1,6 @@
+*{
+  font-family: "Tajawal", sans-serif;
+}
 body {
   font-family: 'comic Sans MS', sans-serif;
   background-image: url(098.jpg);
@@ -113,7 +116,8 @@ body.dark-mode {
   height: 50px;
   border: none;
   border-radius: 50%;
-  background-color: #ffffff;
+  background-color: #ffffff34;
+  backdrop-filter: blur(8px);
   box-shadow: 0 5px 15px rgb(0, 0, 0);
   cursor: pointer;
   font-size: 24px;
@@ -142,4 +146,43 @@ body.dark-mode #options-container button {
 body.dark-mode #options-container button:hover {
   background-color: #161616;
   color: white;
+}
+#progress-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 50%;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: default;
+  z-index: 1000;
+}
+
+.progress-bg {
+  stroke: #fff;
+  stroke-opacity: 0.3;
+}
+
+.progress-bar {
+  stroke-linecap: round;
+  transform: rotate(-90deg);
+  transform-origin: center;
+  stroke-dashoffset: 100;
+  stroke-dasharray: 100;
+  transition: stroke-dashoffset 0.5s ease;
+}
+
+.progress-text {
+  dominant-baseline: middle;
+  font-weight: bold;
+  font-size: 16px;
+  fill: #ffffff;
+  user-select: none;
 }
