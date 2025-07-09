@@ -1,25 +1,58 @@
 <!DOCTYPE html>
 <html lang="ar">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>لعبة الألغاز 🧩</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+  </head>
+  <body>
     <div class="container">
-        <h1 class="title">لعبة الألغاز 🧩</h1>
-        <div id="quiz-container" class="quiz-box">
-            <div id="question-number">السؤال رقم: 1</div>
-            <div id="question-text">حدث خطا! يرجى اعلام المطور</div>
-            <div id="options-container"></div>
-            <div id="attempts">المحاولات: <span id="remaining-attempts">10</span></div>
-            <div id="score">النقاط: <span id="score-count">0</span></div>
+      <h1 class="title">لعبة الألغاز 🧩</h1>
+      <div id="quiz-container" class="quiz-box">
+        <div id="question-number">السؤال رقم: 1</div>
+        <div id="question-text">حدث خطا! يرجى اعلام المطور</div>
+        <div id="options-container"></div>
+        <div id="attempts">
+          المحاولات: <span id="remaining-attempts">10</span>
         </div>
+        <div id="score">النقاط: <span id="score-count">0</span></div>
+      </div>
     </div>
 
     <button id="dark-mode-toggle" class="dark-mode-toggle">🌙</button>
 
+    <div id="progress-container" title="تقدم اللعبة">
+  <svg width="100" height="100" viewBox="0 0 36 36">
+    <path
+      class="progress-bg"
+      d="M18 2.0845
+         a 15.9155 15.9155 0 0 1 0 31.831
+         a 15.9155 15.9155 0 0 1 0 -31.831"
+      fill="none"
+      stroke="#fff"
+      stroke-opacity="0.3"
+      stroke-width="4"
+    />
+    <path
+      class="progress-bar"
+      stroke="#007bff"
+      stroke-width="4"
+      fill="none"
+      stroke-dasharray="100"
+      stroke-dashoffset="100"
+      d="M18 2.0845
+         a 15.9155 15.9155 0 0 1 0 31.831
+         a 15.9155 15.9155 0 0 1 0 -31.831"
+    />
+    <text x="18" y="15" class="progress-text" text-anchor="middle" font-size="8" fill="#007bff" font-family="Arial" dy=".3em">0%</text>
+  </svg>
+</div>
+
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
