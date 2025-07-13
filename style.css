@@ -1,6 +1,7 @@
 *{
   font-family: "Tajawal", sans-serif;
   color: white;
+  user-select: none;
 }
 body {
   margin: 0;
@@ -220,5 +221,19 @@ body.dark-mode #options-container button:hover {
   }
   to {
     transform: translateY(-10px);
+  }
+}
+.footer {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.575);
+  z-index: 1000;
+  user-select: none;
+}
+@media (max-width: 600px) {
+  .footer {
+    font-size: 10px;
   }
 }
